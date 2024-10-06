@@ -9,7 +9,7 @@
       <a href="#">{{ $post['author'] }}</a> | <time>2021-08-01</time>
     </div>
     <p class="my-4 font-light">{{ $post['body'] }}</p>
-    {{-- <a href="/posts/{{ $post['id'] }}" class="font-medium text-blue-500 hover:underline">Read more &raquo;</a> --}}
+    <a href="/posts" class="font-medium text-blue-500 hover:underline">&laquo; Back</a>
   </article>
 
 </x-layout>
