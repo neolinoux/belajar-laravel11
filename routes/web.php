@@ -14,8 +14,8 @@ Route::get('/about', function () {
   return view('about', ['header' => 'About Page']);
 });
 
-Route::get('/posts/{slug}', function ($slug) {
-    $post = Post::find($slug);
+Route::get('/posts/{post:slug}', function (Post $post) {
+    // $post = Post::where('slug', $slug)->first();
 
     return view('post', [
         'header' => 'Post Page',
@@ -26,7 +26,7 @@ Route::get('/posts/{slug}', function ($slug) {
 Route::get('/posts', function () {
   return view('posts', [
     'header' => 'Posts Page',
-    'posts' => Post::getAllPost()
+    'posts' => Post::all()
   ]);
 });
 
