@@ -9,9 +9,9 @@
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-              <x-nav-link href="posts" :active="request()->is('posts')">Blog</x-nav-link>
-              <x-nav-link href="about" :active="request()->is('about')">About</x-nav-link>
-              <x-nav-link href="contact" :active="request()->is('contact')">Contact</x-nav-link>
+              <x-nav-link href="/posts" :active="request()->is('posts')">Blog</x-nav-link>
+              <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+              <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
         <x-nav-mobile href="/" :active="request()->is('/')">Home</x-nav-mobile>
         <x-nav-mobile href="/posts" :active="request()->is('posts')">Posts</x-nav-mobile>
         <x-nav-mobile href="/about" :active="request()->is('about')">About</x-nav-mobile>
-        <x-nav-mobile href="contact" :active="request()->is('contact')">Contact</x-nav-mobile>
+        <x-nav-mobile href="/contact" :active="request()->is('contact')">Contact</x-nav-mobile>
       </div>
       <div class="border-t border-gray-700 pb-3 pt-4">
         <div class="flex items-center px-5">

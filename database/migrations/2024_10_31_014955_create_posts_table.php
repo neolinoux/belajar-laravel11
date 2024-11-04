@@ -12,12 +12,20 @@ return new class extends Migration
   public function up(): void
   {
     Schema::create('posts', function (Blueprint $table) {
-      $table->id();
+      $table->id('post_id');
+      $table->foreignId('author_id')->constrained(
+        'users',
+        'id'
+      );
       $table->string('title');
-      $table->string('author');
       $table->string('slug')->unique();
       $table->text('body');
       $table->timestamps();
+
+      // FK
+      // $table->unsignedBigInteger('author_id');
+      // $table->foreign('author_id')->references('user_id')->on('users');
+
     });
   }
 
