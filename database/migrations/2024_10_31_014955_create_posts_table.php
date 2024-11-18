@@ -17,9 +17,13 @@ return new class extends Migration
         'users',
         'id'
       );
+      $table->foreignId('category_id')->constrained(
+        'categories',
+        'id'
+      );
       $table->string('title');
       $table->string('slug')->unique();
-      $table->text('body');
+      $table->text('body'); 
       $table->timestamps();
 
       // FK
