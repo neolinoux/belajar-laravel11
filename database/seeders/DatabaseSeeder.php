@@ -45,10 +45,9 @@ class DatabaseSeeder extends Seeder
         //   'body' => fake()->paragraphs(rand(3, 7), true),
         // ]);
 
-        $this->call([
-            UserSeeder::class,
-            CategorySeeder::class
-        ]);
+        $this->call(CategorySeeder::class);
+        
+        $this->call(UserSeeder::class);
 
         Post::factory(100)->recycle(
           Category::all(),
