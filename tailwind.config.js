@@ -7,7 +7,9 @@ export default {
     "./resources/**/*.js",
     "./resources/**/*.vue",
     "./node_modules/flowbite/**/*.js",
+    "./node_modules/flowbite/**/*.js",
   ],
+  darkMode: 'class',
   darkMode: 'class',
   theme: {
     extend: {
