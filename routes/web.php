@@ -29,12 +29,14 @@ Route::get('/posts', function () {
   #with eager loading
   // $posts = Post::with(['category', 'author'])->latest()->get(); 
   
+  // dump(request('search'));
+  
   #without eager loading
-  $posts = Post::latest()->get(); 
+  // $posts = Post::latest(); 
   
   return view('posts', [
     'header' => 'Posts Page',
-    'posts' => $posts
+    'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->get() 
   ]);
 });
 
